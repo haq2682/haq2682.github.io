@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            h2, p, hr {
+                display: none;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            body {
+                background-color: black;
+            }
+            .dropdown-menu li a{
+                color: white;
+            }
+            .dropdown-menu li a:hover {
+                color: white;
+                background-color: black;
+            }
+            #background {
+                position: fixed;
+                bottom: 40px;
+                opacity: 0.5;
+            }
+            #welcometext > p{
+                color: aliceblue;
+                position: relative;
+                top: 500px;
+                text-align: center;
+                font-size: 25px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #welcometext > h2{
+                color: aliceblue;
+                position: relative;
+                top: 50px;
+                text-align: center;
+                font-size: 40px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #contact {
+                font-size: 20px;
+                color: white;
+            }
+            #myNavbar {
+                font-size: 20px;
+                color: white;
+            }
+            .hr1{
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 30px;
+            }
+            .hr2 {
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 600px;
+            }
+            .hr3 {
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 750px;
+            }
+            .hr4 {
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 900px;
+            }
+            .hr5 {
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 1050px;
+            }
+            .hr6 {
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 1200px;
+            }
+            .hr7 {
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 1350px;
+            }
+            .hr8 {
+                color: white;
+                width: 100%;
+                position: relative;
+                top: 1600px;
+            }
+            .navbar-inverse {
+                color: white;
+                background-color: #842bd7;
+                border: none;
+            }
+            .image img {
+                position: relative;
+                left: 10px;
+                float: left;
+                vertical-align: middle;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            .image h4 {
+                position: relative;
+                left: 30px;
+                color: aliceblue;
+                font-size: 25px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            .image > p:first-of-type {
+                position: relative;
+                left: 30px;
+                color: aliceblue;
+                font-weight: 700;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            .image > p:last-child {
+                position: relative;
+                left: 120px;
+                bottom: 5px;
+                color: aliceblue;
+                font-weight: 700;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            .image {
+                position: relative;
+                top: 50px;
+            }
+            #about-me {
+                position: relative;
+                top: 650px;
+                color: white;
+                text-align: center;
+                font-size: 23px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #about-me > h2 {
+                font-weight: 1000;
+            }
+            #education {
+                position: relative;
+                top: 800px;
+                color: white;
+                text-align: center;
+                font-size: 23px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #education > h2 {
+                font-weight: 1000;
+            }
+            #portfolio {
+                position: relative;
+                top: 950px;
+                color: white;
+                text-align: center;
+                font-size: 23px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #portfolio > h2 {
+                font-weight: 1000;
+            }
+            #logoh2 {
+                text-align: center;
+                font-size: 23px;
+                font-weight: 1000;
+                color: white;
+                position: relative;
+                top: 1050px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #logo {
+                position: relative;
+                top: 1100px;
+                justify-content: center;
+            }
+            #myCarousel1 {
+                width: 600px;
+                height: 600px;
+                position: relative;
+                margin: 0 auto;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #businessh2 {
+                text-align: center;
+                font-size: 23px;
+                font-weight: 1000;
+                color: white;
+                position: relative;
+                top: 1300px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #business {
+                position: relative;
+                top: 1350px;
+                justify-content: center;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #myCarousel2 {
+                width: 600px;
+                height: 600px;
+                position: relative;
+                margin: 0 auto;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #stationaryh2 {
+                text-align: center;
+                font-size: 23px;
+                font-weight: 1000;
+                color: white;
+                position: relative;
+                top: 1550px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #stationary {
+                position: relative;
+                top: 1600px;
+                justify-content: center;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #myCarousel3 {
+                width: 600px;
+                height: 600px;
+                position: relative;
+                margin: 0 auto;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #miscellaneoush2 {
+                text-align: center;
+                font-size: 23px;
+                font-weight: 1000;
+                color: white;
+                position: relative;
+                top: 1800px;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #miscellaneous {
+                position: relative;
+                top: 1850px;
+                justify-content: center;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            #myCarousel4 {
+                width: 600px;
+                height: 600px;
+                position: relative;
+                margin: 0 auto;
+                animation: myfirst 1s;
+                animation-direction: normal;
+            }
+            @keyframes myfirst {
+                0%  {top: 2000px;}
+                15% {bottom: 0px;}
+            }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+        <div id="background">
+            <img src="E:\Pictures\Wallpapers\RichWorks.jpg" oncontextmenu="return false;">
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">DASHGFX</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#welcometext">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li class="dropdown" id="dropdown1">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gfx Portfolio<span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="dropdownmenu1">
+                            <li><a href="#portfolio">Portfolio Info</a></li>
+                            <li><a href="#logo">Logo Designs</a></li>
+                            <li><a href="#business">Business Cards</a></li>
+                            <li><a href="#stationary">Stationary Designs</a></li>
+                            <li><a href="#miscellaneous">Miscellaneous</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="dropdown2">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Portfolio<span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="dropdownmenu2">
+                            <li><a href="JS/tipcalculator.html">Tip Calculator</a></li>
+                            <li><a href="JS/Live-Time.html">Live Clock</a></li>
+                            <li><a href="JS/To-Do-List.html">To Do List</a></li>
+                            <li><a href="Calculator.html">Calculator</a></li>
+                            <li><a href="JS/Form-Validation.html">Form Validation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="contact">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Me<span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="dropdownmenu3">
+                            <li><a href="http://www.facebook.com/abdulhaq.khalid.9">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/kd4sh1/">Instagram</a></li>
+                            <li><a href="http://www.fiverr.com/abdul_h_khalid?">Fiverr</a></li>
+                            <li><a href="http://twitter.com/haq2682">Twitter</a></li>
+                            <li><a href="http://mail.google.com/mail/u/haq2682@gmail.com">Gmail</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="image">
+            <img class="img img-circle" src="E:\Pictures\Wallpapers\DP.png" alt="Avatar" height="50px" width="90px">
+            <h4>Abdul Haq Khalid</h4>
+            <p>Graphics Designer, Web Developer,</p>
+            <p>Computer Student, Gamer</p>
+        </div>
+        <hr class="hr1">
+        <div class="container">
+            <div class="container-fluid">
+                <div id="welcometext">
+                    <h2>Welcome to my Website and Portfolio!</h2>
+                    <p>Here I have posted about myself, my profession and website <br> and graphics portfolio. <br> I hope this will prove inspirational to you.</p>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="container-fluid">
+                <div id="about-me">
+                    <h2>About Me:</h2>
+                    <p>My name is Abdul Haq Khalid. I am a Matriculation Graduate student and want to work and become financially stable while doing my Intermediate. I have experience of one year in Graphics Designing. My passion is Web Development and Graphics Designing. I tried working on Fiverr as a Graphics Designer but in vain because of high crowd of Freelancers in the niche and because of much experienced people. Now I am focusing on developing my Web Development skills. I am mastering HTML, CSS and JavaScript right now and have an urge to become a Full-Stack Web Developer. I hope to find peace of mind and wealth in this niche as learning it already develops a sense of joy and responsibility inside me. I am a creative person and tend to see things differently that also enhances my creative skills.</p>
+                </div>
+            </div>
+            <hr class="hr3">
+            <div class="container-fluid">
+                <div id="education">
+                    <h2>About my Education:</h2>
+                    <p>I have completed my Matriculation in 2020 from Govt. Central Model School, Lower Mall, Lahore. With respect to my skill sets, I have completed my diploma of Graphics Designing and Freelancing from digiskills.pk. I have an aim to become Full-Stack Web Developer so I am in the learning phase currently from YouTube. I shall complete my Intermediate of Computer Sciences ICS in the next two years from Government College, Lahore. Then I shall take admission in Bachelor of Computer Sciences in a reliable institute.</p>
+                </div>
+            </div>
+            <hr class="hr4">
+            <div class="container-fluid">
+                <div id="portfolio">
+                    <h2>Portfolio Info!</h2>
+                    <p>First of all, I consider this website as one of my portfolio items. This section contains my graphics designing portfolio. Please select one of the categories to view my part of the portfolio related to that category.</p>
+                </div>
+            </div>
+            <hr class="hr5">
+            <div class="container-fluid">
+                <h2 id="logoh2">Logo Designs</h2>
+                <div id="logo">
+                    <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                            <li data-target="#myCarousel1" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="E:\Pictures\Portfolio\Explosions Labs\Explosions Labs Logo 3.png">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Seaward\Seaward Logo 2.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Prondo's\Prondo's Logo Mockup.jpg">
+                            </div>
+                        </div>
+                        <a href="#myCarousel1" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a href="#myCarousel1" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr6">
+            <div class="container-fluid">
+                <h2 id="businessh2">Business Cards</h2>
+                <div id="business">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel3" data-slide-to="1"></li>
+                            <li data-target="#myCarousel3" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="E:\Pictures\Portfolio\Explosions Labs\Explosions Labs Card Mockup.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Seaward\Seaward Card Mockup.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Prondo's\Prondo's Card Mockup.jpg">
+                            </div>
+                        </div>
+                        <a href="#myCarousel2" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a href="#myCarousel2" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr7">
+            <div class="container-fluid">
+                <h2 id="stationaryh2">Stationary Designs</h2>
+                <div id="stationary">
+                    <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel3" data-slide-to="1"></li>
+                            <li data-target="#myCarousel3" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="E:\Pictures\Portfolio\Explosions Labs\Explosions Labs Stationery Mockup.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Prondo's\Prondo's Mockup.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Seaward\Stationery MockUp 1.jpg">
+                            </div>
+                        </div>
+                        <a href="#myCarousel3" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a href="#myCarousel3" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr8">
+            <div class="container-fluid">
+                <h2 id="miscellaneoush2">Miscellaneous</h2>
+                <div id="miscellaneous">
+                    <div id="myCarousel4" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="E:\Pictures\Portfolio\Brochures\Restaurant Brochures\Restaurant Brochure Page 1 Mockup.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Brochures\Restaurant Brochures\Restaurant Brochure Page 2 Mockup.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Eid Poster.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\2020 Ramadan Cover.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Ramadan Diaries.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Retro.png">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Portfolio\Eid Milad.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Wallpapers\DP.png">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Wallpapers\Alvi Nastaleeg.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Wallpapers\RichWorks.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="E:\Pictures\Wallpapers\Crisp.jpg">
+                            </div>
+                        </div>
+                        <a href="#myCarousel4" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a href="#myCarousel4" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $("h2, p, hr").fadeIn(1500);
+                $('#dropdown1').hover(function(){
+                    $('#dropdownmenu1').slideToggle(300).css("background-color","blueviolet");
+                });
+                $('#dropdown2').hover(function(){
+                    $('#dropdownmenu2').slideToggle(300).css("background-color","blueviolet");
+                });
+                $('#contact').hover(function(){
+                    $('#dropdownmenu3').slideToggle(300).css("background-color","blueviolet");
+                });
+            });
+        </script>
+    </body>
+</html>

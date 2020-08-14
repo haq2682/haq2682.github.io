@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            * {
+                font-family: Microsoft YaHei;
+            }
+            body {
+                background-color:blueviolet;
+            }
+            .container {
+                background-color: indigo;
+                padding: 30px;
+                position: relative;
+                top: 250px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            #firstnameid {
+                width: 500px;
+                text-align: center;
+                margin: 0 auto;
+                padding: 15px;
+            }
+            #firstnameid > label {
+                font-size: 20px;
+                display:inline;
+                color: white;
+            }
+            #lastnameid {
+                width: 500px;
+                text-align: center;
+                margin: 0 auto;
+                padding: 15px;
+            }
+            #lastnameid > label {
+                font-size: 20px;
+                display:inline;
+                color: white;
+            }
+            #emailid {
+                width: 500px;
+                text-align: center;
+                margin: 0 auto;
+                padding: 15px;
+            }
+            #emailid > label {
+                font-size: 20px;
+                display:inline;
+                color: white;
+            }
+            #pwdid {
+                width: 500px;
+                text-align: center;
+                margin: 0 auto;
+                padding: 15px;
+            }
+            #pwdid > label {
+                font-size: 20px;
+                display:inline;
+                color: white;
+            }
+            #usernameid {
+                width: 500px;
+                text-align: center;
+                margin: 0 auto;
+                padding: 15px;
+            }
+            #usernameid > label {
+                font-size: 20px;
+                display:inline;
+                color: white;
+            }
+            #signup {
+                position: absolute;
+                left: 50px;
+                bottom: 84px;
+                color: white;
+            }
+            #submit {
+                position: relative;
+                left: 500px;
+                padding: 15px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-horizontal">
+                <div class="form-group has-feedback" id="firstnameid">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Enter your first name" onblur="blur1()" required>
+                    <span id="invalid1"></span>
+                </div>
+                <div class="form-group has-feedback" id="lastnameid">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Enter your last name" onblur="blur2()" required>
+                    <span id="invalid2"></span>
+                </div>
+                <div class="form-group has-feedback" id="emailid">
+                    <label for="email">E-mail Address:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your E-mail" onblur="blur3()" required>
+                    <span id="invalid3"></span>
+                </div>
+                <div class="from-group has-feedback" id="pwdid">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password" onblur="blur4()" required>
+                    <span id="invalid4"></span>
+                </div>
+                <div class="form-group has-feedback" id="usernameid">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your Username" onblur="blur5()" required>
+                    <span id="invalid5"></span>
+                </div>
+                <input type="checkbox" class="checkbox" onchange="document.getElementById('submit').disabled = !this.checked">
+                <span id="signup">By signing up, I accept the <a href="#">Terms and Conditions</a></span>
+                <button type="submit" class="btn btn-success disabled right" id="submit" value="Submit"><a href="next.html">Submit</a></button>
+            </form>
+        </div>
+        <script>function blur1() {
+            var firstnamevar = document.getElementById("firstname").value;
+            const regex1 = /^[a-zA-Z\s]{2,}[^!@#$%^&*()-+_={}:;""'',.<>/?|][^0-9]$/
+            if (firstnamevar === "" || !firstnamevar.match(regex1)) {
+                document.getElementById("firstnameid").className = "has-error";
+                document.getElementById("invalid1").innerHTML = "<span style='color: red'>Invalid First Name!</span>";
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").classList.add("disabled");
+                return false;
+            } else {
+                document.getElementById("firstnameid").className = "has-success";
+                document.getElementById("invalid1").innerHTML = "<span style='color: green'>Approved!</span>";
+                return true;
+            }
+        }
+        function blur2() {
+            var lastnamevar = document.getElementById("lastname").value;
+            const regex2 = /^[a-zA-Z\s]{2,}[^!@#$%^&*()-+_={}:;""'',.<>/?|][^0-9]$/
+            if (lastnamevar === "" || !lastnamevar.match(regex2)) {
+                document.getElementById("lastnameid").className = "has-error";
+                document.getElementById("invalid2").innerHTML = "<span style='color: red'>Invalid Last Name!</span>";
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").classList.add("disabled");
+                return false;
+            } else {
+                document.getElementById("lastnameid").className = "has-success";
+                document.getElementById("invalid2").innerHTML = "<span style='color: green'>Approved!</span>";
+                return true;
+            }
+        }
+        function blur3() {
+            var emailvar = document.getElementById("email").value;
+            var emailvar2 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (emailvar === "" || !emailvar.match(emailvar2)) {
+                document.getElementById("emailid").className = "has-error";
+                document.getElementById("invalid3").innerHTML = "<span style='color:red'>Invalid Email!</span>";
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").classList.add("disabled");
+                return false;
+            } else {
+                document.getElementById("emailid").className = "has-success";
+                document.getElementById("invalid3").innerHTML = "<span style='color:green'>Approved!</span>";
+                return true;
+            }
+        }
+        function blur4() {
+            var pwdvar = document.getElementById("pwd").value;
+            if (pwdvar === "" || pwdvar.length<8) {
+                document.getElementById("pwdid").className = "has-error";
+                document.getElementById("invalid4").innerHTML = "<span style='color:red'>Invalid Password! (Must be longer than 8 Characters)</span>";
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").classList.add("disabled");
+                return false;
+            }
+            else if (pwdvar.length>8) {
+                document.getElementById("pwdid").className = "has-success";
+                document.getElementById("invalid4").innerHTML = "<span style='color:green'>Approved!</span>";
+                return true;
+            }
+        }
+        function blur5() {
+            var usernamevar = document.getElementById("username").value;
+            const regex3 = /^[a-zA-Z\s]{2,}[^!@#$%^&*()-+_={}:;""'',.<>/?|][^0-9]$/
+            if (usernamevar === "" || usernamevar.length<3 || !usernamevar.match(regex3)) {
+                document.getElementById("usernameid").className = "has-error";
+                document.getElementById("invalid5").innerHTML = "<span style='color:red'>Invalid Username!</span>";
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").classList.add("disabled");
+                return false;
+            }
+            else {
+                document.getElementById("usernameid").className = "has-success";
+                document.getElementById("invalid5").innerHTML = "<span style='color:green'>Username Accepted!</span>";
+                document.getElementById("submit").disable = false;
+                document.getElementById("submit").classList.remove("disabled");
+                return true;
+            }
+        }</script>
+    </body>
+</html>
