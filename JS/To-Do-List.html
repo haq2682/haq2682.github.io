@@ -112,7 +112,7 @@
         border-radius: 10px;
         float: left;
         font-size: 16px;
-        position: relative;
+        /*position: relative;*/
         left: 400px;
         top: 10px;
         padding: 10px;
@@ -120,26 +120,20 @@
         transition: 0.5s;
         outline: none;
         }
-        input:focus {
-            padding-left: 100px;
-            transition: 0.5s;
-            position: relative;
-            left: 300px;
-        }
         .addBtn {
-            position: absolute;
-            top: 87px;
-            left: 675px;
+            /*position: relative;
+            top: 15px;
+            left: 73px;*/
             padding: 10px 20px;
         }
         </style>
     </head>
     <body>
         <div class="container">
-            <div id="myDIV" class="header">
-                <h2 style="margin:5px">My To Do List</h2>
-                <input type="text" id="myInput" placeholder="Title...">
-                <button onclick="newElement()" class="addBtn btn btn-success">Add</button>
+            <div id="myDIV" class="header container-fluid">
+                <h2 style="margin:5px" class="container-fluid">My To Do List</h2>
+                <input type="text" id="myInput" class="container-fluid" placeholder="Title...">
+                <button onclick="newElement()" class="addBtn btn btn-success container-fluid col-sm-1" style="left: 1%;">Add</button>
             </div>
             <ul id="myUL">
             </ul>

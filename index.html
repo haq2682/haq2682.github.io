@@ -14,7 +14,7 @@
                 animation-direction: normal;
             }
             body {
-                background-color: black;
+                background-color: rgb(55, 0, 95);
             }
             .dropdown-menu li a{
                 color: white;
@@ -22,11 +22,6 @@
             .dropdown-menu li a:hover {
                 color: white;
                 background-color: black;
-            }
-            #background {
-                position: fixed;
-                bottom: 40px;
-                opacity: 0.5;
             }
             #welcometext > p{
                 color: aliceblue;
@@ -196,8 +191,6 @@
                 justify-content: center;
             }
             #myCarousel1 {
-                width: 600px;
-                height: 600px;
                 position: relative;
                 margin: 0 auto;
                 animation: myfirst 1s;
@@ -221,8 +214,6 @@
                 animation-direction: normal;
             }
             #myCarousel2 {
-                width: 600px;
-                height: 600px;
                 position: relative;
                 margin: 0 auto;
                 animation: myfirst 1s;
@@ -246,8 +237,6 @@
                 animation-direction: normal;
             }
             #myCarousel3 {
-                width: 600px;
-                height: 600px;
                 position: relative;
                 margin: 0 auto;
                 animation: myfirst 1s;
@@ -271,8 +260,6 @@
                 animation-direction: normal;
             }
             #myCarousel4 {
-                width: 600px;
-                height: 600px;
                 position: relative;
                 margin: 0 auto;
                 animation: myfirst 1s;
@@ -285,9 +272,6 @@
         </style>
     </head>
     <body data-spy="scroll" data-target=".navbar">
-        <div id="background">
-            <img src="Miscellaneous/RichWorks.jpg" oncontextmenu="return false;">
-        </div>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -521,15 +505,24 @@
         <script>
             $(document).ready(function() {
                 $("h2, p, hr").fadeIn(1500);
-                $('#dropdown1').hover(function(){
+                $('#dropdown1').mouseup(function(){
                     $('#dropdownmenu1').slideToggle(300).css("background-color","blueviolet");
                 });
-                $('#dropdown2').hover(function(){
+                $('#dropdown2').mouseup(function(){
                     $('#dropdownmenu2').slideToggle(300).css("background-color","blueviolet");
                 });
-                $('#contact').hover(function(){
+                $('#contact').mouseup(function(){
                     $('#dropdownmenu3').slideToggle(300).css("background-color","blueviolet");
                 });
+                $('#dropdown1').mouseleave(function(){
+                    $('#dropdownmenu1').slideUp(300);
+                })
+                $('#dropdown2').mouseleave(function(){
+                    $('#dropdownmenu2').slideUp(300);
+                })
+                $('#contact').mouseleave(function(){
+                    $('#dropdownmenu3').slideUp(300);
+                })
             });
         </script>
     </body>

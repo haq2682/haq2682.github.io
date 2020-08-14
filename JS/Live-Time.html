@@ -3,20 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <style>
             body {
                 background-color: blueviolet;
                 font-family:'Courier New', Courier, monospace;
             }
             #txt {
-                position: relative;
-                top: 400px;
-                left: 775px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
                 color:aqua;
                 font-size: 50px;
                 font-weight: 1000;
+                margin: 0 auto;
+                transform: translateX(-50%) translateY(-50%);
             }
         </style>
+        <title>Live Clock</title>
     </head>
     <body>
         <div onload="setTime()" id="txt"></div>

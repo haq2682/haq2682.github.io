@@ -17,6 +17,7 @@
             .container {
                 background-color: indigo;
                 padding: 30px;
+                width: 1000px;
                 position: relative;
                 top: 250px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -89,11 +90,20 @@
                 padding-left: 30px;
                 padding-right: 30px;
             }
+            @media (min-width: 823px) {
+                .container {
+                    min-width: 1000px;
+                }
+            }
+            .checkbox {
+                position: relative;
+                right: 15px;
+            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <form class="form-horizontal">
+        <div class="container img-fluid">
+            <form class="form-horizontal container-fluid">
                 <div class="form-group has-feedback" id="firstnameid">
                     <label for="firstname">First Name:</label>
                     <input type="text" class="form-control" id="firstname" placeholder="Enter your first name" onblur="blur1()" required>

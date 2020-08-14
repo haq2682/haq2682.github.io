@@ -4,12 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <title>Calculator</title>
         <style>
             *{
             margin: 0;
             padding: 0;
             font-family: 'Hind Guntur', sans-serif;
+        }
+        .container {
+            position: absolute;
+            top: 30%;
+            right: 35%;
+            max-height: 300px;
         }
         table {
             position: absolute;
@@ -18,25 +28,25 @@
         }
         .text {
             position: absolute;
+            bottom: 101%;
             right: 99%;
             left: 1%;
-            bottom: 520px;
-            width: 295px;
-            height: 75px;
+            width: 320px;
+            height: 100px;
             border: 5px solid darkviolet;
             background: transparent;
             border-radius: 200px;
-            font-size: 75px;
+            font-size: 50px;
             color: aliceblue;
             padding: 50px;
         }
         .button {
-            width: 100px;
-            height: 80px;
+            width: 80px;
+            height: 60px;
             color: white;
             background: transparent;
             border: 3px solid darkviolet;
-            font-size: 30px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 50%;
         }
@@ -45,12 +55,12 @@
             transition: 0.5s;
         }
         .buttone {
-            width: 100px;
-            height: 175px;
+            width: 80px;
+            height: 155px;
             color: white;
             background: transparent;
             border: 3px solid darkviolet;
-            font-size: 30px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 50px;
         }
@@ -59,12 +69,12 @@
             transition: 0.5s;
         }
         .buttond {
-            width: 100px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             color: white;
             background: transparent;
             border: 3px solid darkviolet;
-            font-size: 30px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 50%;
             position: relative;
@@ -76,12 +86,12 @@
             transition: 0.5s;
         }
         .button0 {
-            width: 200px;
-            height: 80px;
+            width: 180px;
+            height: 60px;
             color: white;
             background: transparent;
             border: 3px solid darkviolet;
-            font-size: 30px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 50px;
             position: absolute;
@@ -92,12 +102,12 @@
             transition: 0.5s;
         }
         .button789 {
-            width: 100px;
-            height: 80px;
+            width: 80px;
+            height: 60px;
             color: white;
             background: transparent;
             border: 3px solid darkviolet;
-            font-size: 30px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 50%;
             position: relative;
@@ -122,7 +132,7 @@
         </style>
     </head>
     <body>
-        <div class="box"></div>
+        <div class="container">
             <form name="form">
                 <table>
                     <tr>
@@ -160,6 +170,7 @@
                     </tr>
                 </table>
             </form>
+        </div>
         <div id="box2"></div>
         <script>
             function insert(num) {
