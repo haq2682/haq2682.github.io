@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="icon" href="Business-Services-512.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
@@ -306,6 +307,13 @@
                             <li><a href="JS/Form-Validation.html">Form Validation</a></li>
                         </ul>
                     </li>
+                    <li class="dropdown" id="dropdown4">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">React Portfolio<span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="dropdownmenu4">
+                            <li><a href="https://haq2682.github.io/todoapp">Todo App</a></li>
+                            <li><a href="https://haq2682.github.io/weatherapp">Weather App</a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown" id="contact">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Me<span class="caret"></span></a>
                         <ul class="dropdown-menu" id="dropdownmenu3">
@@ -511,6 +519,9 @@
                 $('#dropdown2').mouseup(function(){
                     $('#dropdownmenu2').slideToggle(300).css("background-color","blueviolet");
                 });
+                $('#dropdown4').mouseup(function(){
+                    $('#dropdownmenu4').slideToggle(300).css("background-color","blueviolet");
+                });
                 $('#contact').mouseup(function(){
                     $('#dropdownmenu3').slideToggle(300).css("background-color","blueviolet");
                 });
@@ -519,6 +530,9 @@
                 })
                 $('#dropdown2').mouseleave(function(){
                     $('#dropdownmenu2').slideUp(300);
+                })
+                $('#dropdown4').mouseleave(function(){
+                    $('#dropdownmenu4').slideUp(300);
                 })
                 $('#contact').mouseleave(function(){
                     $('#dropdownmenu3').slideUp(300);
